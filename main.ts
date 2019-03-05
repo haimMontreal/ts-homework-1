@@ -31,6 +31,10 @@ let newGame: Game;
 //The function that adds the game
 function addGame() :void {
 
-    //YOUR CODE GOES HERE
+    let game = new Game((<HTMLInputElement>document.getElementById("name")).value, Number((<HTMLInputElement>document.getElementById("rating")).value));
+
+    let row = game.createListNode();
+
+    document.getElementById("games").appendChild(row);
 
 }
